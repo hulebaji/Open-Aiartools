@@ -12,7 +12,7 @@ Disallow: /_next/
 Disallow: /admin/
 
 # Sitemap位置
-Sitemap: https://aiartools.com/sitemap.xml
+Sitemap: https://showmeai.art/sitemap.xml
 
 # 抓取延迟（可选）
 Crawl-delay: 1`

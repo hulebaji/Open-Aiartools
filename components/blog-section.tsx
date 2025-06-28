@@ -31,7 +31,7 @@ export default function BlogSection({ locale }: BlogSectionProps) {
     },
     {
       key: "introduction",
-      link: `/${locale}/blog/introducing-aiartools`,
+      link: `/${locale}/blog/introducing-showmeai`,
       sortDate: "2025-05-31",
       image: "/images/Transform Your Images with the Power of AI.png"
     },

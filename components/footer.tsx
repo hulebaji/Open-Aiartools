@@ -23,27 +23,27 @@ export default function Footer({ locale }: FooterProps) {
             <div className="flex items-center space-x-2">
               <Image 
                 src="/images/logo.png" 
-                alt="Aiartools Logo" 
+                alt={`${locale === 'zh' ? '须弥AI' : 'Showme AI'} Logo`}
                 width={32} 
                 height={32}
                 className="w-8 h-8"
               />
               <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Aiartools
+                {locale === 'zh' ? '须弥AI' : 'Showme AI'}
               </h3>
             </div>
             <p className="text-muted-foreground">{t("description")}</p>
             <div className="flex space-x-4">
-              <a href="https://x.com/zyailive" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/hulebaji" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                   <TwitterIcon className="w-5 h-5" />
                 </Button>
-              </a>
+              </a>{/*
               <a href="https://github.com/ItusiAI" target="_blank" rel="noopener noreferrer">
                 <Button variant="ghost" size="icon">
                   <GithubIcon className="w-5 h-5" />
                 </Button>
-              </a>
+              </a>*/}
               <Link href={`/${locale}`}>
                 <Button variant="ghost" size="icon">
                   <GlobeIcon className="w-5 h-5" />
@@ -107,32 +107,32 @@ export default function Footer({ locale }: FooterProps) {
             <ul className="space-y-2 text-muted-foreground">
               <li>
                 <a 
-                  href="https://www.itusi.cn/" 
+                  href="https://xdownloader.xyz/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-foreground transition-colors"
                 >
-                  {t("friendlyLinks.itusi")}
+                  {t("friendlyLinks.xdownloader")}
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://voicecanvas.org/" 
+                  href="https://fopo.me/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-foreground transition-colors"
                 >
-                  {t("friendlyLinks.voiceCanvas")}
+                  {t("friendlyLinks.fopo")}
                 </a>
               </li>
               <li>
                 <a 
-                  href="https://pdf2md.site/" 
+                  href="https://hulebaji.me/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="hover:text-foreground transition-colors"
                 >
-                  {t("friendlyLinks.pdf2md")}
+                  {t("friendlyLinks.hulebaji")}
                 </a>
               </li>
             </ul>
@@ -141,7 +141,7 @@ export default function Footer({ locale }: FooterProps) {
 
         <div className="border-t mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © {currentYear} Aiartools. {t("copyright")}
+            © {currentYear} {locale === 'zh' ? '须弥AI' : 'Showme AI'}. {t("copyright")}
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <Link

@@ -99,13 +99,13 @@ export default function Navigation({ locale }: NavigationProps) {
             <div className="flex items-center space-x-2 cursor-pointer" onClick={scrollToTop}>
               <Image 
                 src="/images/logo.png" 
-                alt="Aiartools Logo" 
+                alt={`${locale === 'zh' ? '须弥AI' : 'Showme AI'} Logo`}
                 width={32} 
                 height={32}
                 className="w-8 h-8"
               />
               <h1 className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">
-                Aiartools
+                {locale === 'zh' ? '须弥AI' : 'Showme AI'}
               </h1>
             </div>
           </div>

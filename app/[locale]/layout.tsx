@@ -3,10 +3,7 @@ import { notFound } from "next/navigation"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server"
 import type { Metadata, Viewport } from "next"
-import { Inter } from "next/font/google"
 import Providers from "@/components/providers"
-
-const inter = Inter({ subsets: ["latin"] })
 
 const locales = ["en", "zh"]
 
@@ -36,9 +33,9 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     keywords: t('keywords'),
-    authors: [{ name: 'Aiartools Team' }],
-    creator: 'Aiartools',
-    publisher: 'Aiartools',
+    authors: [{ name: 'Showme AI Team' }],
+    creator: 'Showme AI',
+    publisher: 'Showme AI',
     robots: {
       index: true,
       follow: true,
@@ -54,10 +51,10 @@ export async function generateMetadata({
       type: 'website',
       locale: locale,
       alternateLocale: locale === 'en' ? 'zh' : 'en',
-      url: 'https://aiartools.com',
+      url: 'https://showmeai.art',
       title: t('ogTitle'),
       description: t('ogDescription'),
-      siteName: 'Aiartools',
+      siteName: 'Showme AI',
       images: [
         {
           url: '/images/og-image.png',
@@ -72,19 +69,19 @@ export async function generateMetadata({
       title: t('twitterTitle'),
       description: t('twitterDescription'),
       images: ['/images/og-image.png'],
-      creator: '@aiartools',
-      site: '@aiartools',
+      creator: '@hulebaji',
+      site: '@hulebaji',
     },
     icons: {
       icon: "/images/favicon.ico",
     },
     manifest: '/site.webmanifest',
     alternates: {
-      canonical: `https://aiartools.com/${locale}`,
+      canonical: `https://showmeai.art/${locale}`,
       languages: {
-        'en': 'https://aiartools.com/en',
-        'zh': 'https://aiartools.com/zh',
-        'x-default': 'https://aiartools.com/en',
+        'en': 'https://showmeai.art/en',
+        'zh': 'https://showmeai.art/zh',
+        'x-default': 'https://showmeai.art/en',
       },
     },
   }
@@ -112,46 +109,43 @@ export default async function LocaleLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <meta name="theme-color" content="#6366f1" />
-        <meta name="color-scheme" content="light dark" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebApplication",
-              "name": "Aiartools",
-              "description": locale === 'zh' 
-                ? "用AI的力量改变你的图像。简单、快速、功能强大。"
-                : "Transform your images with the power of AI. Simple, fast, and incredibly powerful.",
-              "url": "https://aiartools.com",
-              "applicationCategory": "DesignApplication",
-              "operatingSystem": "Web",
-              "offers": {
-                "@type": "Offer",
-                "price": "0",
-                "priceCurrency": "USD"
-              },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "ratingCount": "1250"
-              }
-            })
-          }}
-        />
-      </head>
-      <body className={inter.className}>
-        <Providers>
-          <NextIntlClientProvider messages={messages}>
-            {children}
-          </NextIntlClientProvider>
-        </Providers>
-      </body>
-    </html>
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `document.documentElement.lang = '${locale}';`
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Showme AI",
+            "description": locale === 'zh' 
+              ? "用AI的力量改变你的图像。简单、快速、功能强大。"
+              : "Transform your images with the power of AI. Simple, fast, and incredibly powerful.",
+            "url": "https://showmeai.art",
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Web",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "4.8",
+              "ratingCount": "1250"
+            }
+          })
+        }}
+      />
+      <Providers>
+        <NextIntlClientProvider messages={messages}>
+          {children}
+        </NextIntlClientProvider>
+      </Providers>
+    </>
   )
 }

@@ -10,13 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   
   const titles = {
-    en: "Terms of Service - Aiartools | AI-Powered Image Transformation",
-    zh: "服务条款 - Aiartools | AI驱动的图像变换工具"
+    en: "Terms of Service - Showme AI | AI-Powered Image Transformation",
+    zh: "服务条款 - 须弥AI | AI驱动的图像变换工具"
   }
   
   const descriptions = {
-    en: "Read our terms of service for using Aiartools. Understand your rights, responsibilities, and our service conditions.",
-    zh: "阅读我们使用Aiartools的服务条款。了解您的权利、责任和我们的服务条件。"
+    en: "Read our terms of service for using Showme AI. Understand your rights, responsibilities, and our service conditions.",
+    zh: "阅读我们使用须弥AI的服务条款。了解您的权利、责任和我们的服务条件。"
   }
 
   const title = titles[locale as keyof typeof titles] || titles.en
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `https://aiartools.com/${locale}/terms`,
-      siteName: "Aiartools",
+      url: `https://showmeai.art/${locale}/terms`,
+      siteName: "Showme AI",
       locale: locale === 'zh' ? 'zh_CN' : 'en_US',
       type: 'website',
     },
@@ -39,10 +39,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description,
     },
     alternates: {
-      canonical: `https://aiartools.com/${locale}/terms`,
+      canonical: `https://showmeai.art/${locale}/terms`,
       languages: {
-        'en': 'https://aiartools.com/en/terms',
-        'zh': 'https://aiartools.com/zh/terms',
+        'en': 'https://showmeai.art/en/terms',
+        'zh': 'https://showmeai.art/zh/terms',
       },
     },
   }
@@ -63,9 +63,9 @@ export default async function TermsPage({ params }: TermsPageProps) {
         lastUpdated: "Last updated: May 2025",
         acceptanceTitle: "Acceptance of Terms",
         acceptanceText:
-          'By accessing and using Aiartools ("Service"), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by the above, please do not use this service.',
+          'By accessing and using Showme AI ("Service"), you accept and agree to be bound by the terms and provisions of this agreement. If you do not agree to abide by the above, please do not use this service.',
         serviceDescTitle: "Description of Service",
-        serviceDescText: "Aiartools is an AI-powered image transformation service that allows users to:",
+        serviceDescText: "Showme AI is an AI-powered image transformation service that allows users to:",
         serviceFeatures: [
           "Upload images for AI-powered editing and transformation",
           "Apply various styles, filters, and modifications using text prompts",
@@ -180,7 +180,7 @@ export default async function TermsPage({ params }: TermsPageProps) {
         contactTitle: "Contact Information",
         contactText: "If you have any questions about these Terms of Service, please contact us:",
         contactInfo:
-          "Email: wt@wmcircle.cn\nBusiness Hours: Monday - Friday, 9 AM - 5 PM\nResponse Time: We aim to respond within 24 hours",
+          "Email: hi@showmeai.art\nBusiness Hours: Monday - Friday, 9 AM - 5 PM\nResponse Time: We aim to respond within 24 hours",
       },
       zh: {
         backToHome: "返回首页",
@@ -188,9 +188,9 @@ export default async function TermsPage({ params }: TermsPageProps) {
         lastUpdated: "最后更新：2025年5月",
         acceptanceTitle: "条款接受",
         acceptanceText:
-          '通过访问和使用Aiartools（"服务"），您接受并同意受本协议条款和条件的约束。如果您不同意遵守上述条款，请不要使用此服务。',
+          '通过访问和使用须弥AI（"服务"），您接受并同意受本协议条款和条件的约束。如果您不同意遵守上述条款，请不要使用此服务。',
         serviceDescTitle: "服务描述",
-        serviceDescText: "Aiartools是一个AI驱动的图像变换服务，允许用户：",
+        serviceDescText: "须弥AI是一个AI驱动的图像变换服务，允许用户：",
         serviceFeatures: [
           "上传图像进行AI驱动的编辑和变换",
           "使用文本提示应用各种风格、滤镜和修改",
@@ -291,7 +291,7 @@ export default async function TermsPage({ params }: TermsPageProps) {
         contactTitle: "联系信息",
         contactText: "如果您对这些服务条款有任何疑问，请联系我们：",
         contactInfo:
-          "电子邮件：wt@wmcircle.cn\n营业时间：周一至周五，上午9点至下午5点\n响应时间：我们力争在24小时内回复",
+          "电子邮件：hi@showmeai.art\n营业时间：周一至周五，上午9点至下午5点\n响应时间：我们力争在24小时内回复",
       },
     }
     return translations[locale]?.[key] || translations.en[key]

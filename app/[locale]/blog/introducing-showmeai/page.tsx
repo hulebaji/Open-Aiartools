@@ -11,13 +11,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   
   const titles = {
-    en: "Introducing Aiartools: Transform Your Images with AI | Aiartools Blog",
-    zh: "Aiartools介绍：用AI的力量改变你的图像 | Aiartools 博客"
+    en: "Introducing Showme AI: Transform Your Images with AI | Showme AI Blog",
+    zh: "须弥AI介绍：用AI的力量改变你的图像 | 须弥AI 博客"
   }
   
   const descriptions = {
-    en: "Discover Aiartools, the revolutionary AI-powered image transformation platform. Edit and transform images using simple text prompts with cutting-edge AI technology.",
-    zh: "发现Aiartools，革命性的AI驱动图像转换平台。使用尖端AI技术，通过简单的文本提示编辑和转换图像。"
+    en: "Discover Showme AI, the revolutionary AI-powered image transformation platform. Edit and transform images using simple text prompts with cutting-edge AI technology.",
+    zh: "发现须弥AI，革命性的AI驱动图像转换平台。使用尖端AI技术，通过简单的文本提示编辑和转换图像。"
   }
 
   const title = titles[locale as keyof typeof titles] || titles.en
@@ -29,16 +29,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `https://aiartools.com/${locale}/blog/introducing-aiartools`,
-      siteName: "Aiartools",
+      url: `https://showmeai.art/${locale}/blog/introducing-showmeai`,
+      siteName: "Showme AI",
       locale: locale === 'zh' ? 'zh_CN' : 'en_US',
       type: 'article',
       images: [
         {
-          url: 'https://aiartools.com/images/Transform Your Images with the Power of AI.png',
+          url: 'https://showmeai.art/images/Transform Your Images with the Power of AI.png',
           width: 1000,
           height: 500,
-          alt: 'Aiartools Introduction',
+          alt: 'Showme AI Introduction',
         },
       ],
     },
@@ -46,13 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://aiartools.com/images/Transform Your Images with the Power of AI.png'],
+      images: ['https://showmeai.art/images/Transform Your Images with the Power of AI.png'],
     },
     alternates: {
-      canonical: `https://aiartools.com/${locale}/blog/introducing-aiartools`,
+      canonical: `https://showmeai.art/${locale}/blog/introducing-showmeai`,
       languages: {
-        'en': 'https://aiartools.com/en/blog/introducing-aiartools',
-        'zh': 'https://aiartools.com/zh/blog/introducing-aiartools',
+        'en': 'https://showmeai.art/en/blog/introducing-showmeai',
+        'zh': 'https://showmeai.art/zh/blog/introducing-showmeai',
       },
     },
   }
@@ -62,23 +62,23 @@ interface BlogPostProps {
   params: Promise<{ locale: string }>
 }
 
-export default async function IntroducingAiartools({ params }: BlogPostProps) {
+export default async function IntroducingShowmeAI({ params }: BlogPostProps) {
   const { locale } = await params
   const t = (key: string) => {
     const translations: Record<string, Record<string, string>> = {
       en: {
         backToHome: "Back to Home",
         backToBlog: "Back to Blog",
-        title: "Introducing Aiartools: Transform Your Images with the Power of AI",
+        title: "Introducing Showme AI: Transform Your Images with the Power of AI",
         publishDate: "May 31, 2025",
         readTime: "5 min read",
         category: "Product",
         introduction: "Introduction",
         introText:
-          "Today, we're excited to introduce Aiartools, a revolutionary AI-powered image transformation platform that allows you to edit and transform your images using simple text prompts. Whether you're a professional designer, a social media manager, or just someone who loves creating beautiful images, Aiartools makes image editing accessible, fun, and incredibly powerful.",
-        whatIsAiartools: "What is Aiartools?",
+          "Today, we're excited to introduce Showme AI, a revolutionary AI-powered image transformation platform that allows you to edit and transform your images using simple text prompts. Whether you're a professional designer, a social media manager, or just someone who loves creating beautiful images, Showme AI makes image editing accessible, fun, and incredibly powerful.",
+        whatIsShowmeAI: "What is Showme AI?",
         whatIsText:
-          "Aiartools is an AI-powered image editing platform that understands natural language. Instead of learning complex editing software or manipulating dozens of sliders and controls, you simply describe what you want to change about your image, and our AI does the rest. Want to turn a daytime photo into a night scene? Add a cat to your living room photo? Transform your portrait into an anime character? With Aiartools, it's as simple as typing your request.",
+          "Showme AI is an AI-powered image editing platform that understands natural language. Instead of learning complex editing software or manipulating dozens of sliders and controls, you simply describe what you want to change about your image, and our AI does the rest. Want to turn a daytime photo into a night scene? Add a cat to your living room photo? Transform your portrait into an anime character? With Showme AI, it's as simple as typing your request.",
         keyFeatures: "Key Features",
         feature1Title: "Smart Keyword Editing",
         feature1Text:
@@ -93,7 +93,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         feature4Text:
           "Export your creations in up to 4K resolution, ready for print and digital use. Our AI maintains image quality even through complex transformations.",
         howItWorks: "How It Works",
-        howItWorksText: "Using Aiartools is incredibly simple:",
+        howItWorksText: "Using Showme AI is incredibly simple:",
         step1: "1. Upload your image",
         step1Text: "Start by uploading the image you want to transform. We support all common image formats.",
         step2: "2. Describe your desired changes",
@@ -102,7 +102,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         step3Text:
           "Our AI processes your request and generates the transformed image in seconds. Download it and share your creation with the world.",
         useCases: "Use Cases",
-        useCasesText: "Aiartools can be used in countless creative ways:",
+        useCasesText: "Showme AI can be used in countless creative ways:",
         useCase1: "• Social media content creation",
         useCase1Text: "Create eye-catching, unique images for your social media posts that stand out from the crowd.",
         useCase2: "• Marketing materials",
@@ -115,7 +115,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         useCase4Text:
           "Enhance product photos or change backgrounds to showcase your products in different environments.",
         gettingStarted: "Getting Started",
-        gettingStartedText: "Ready to transform your images with Aiartools? Getting started is easy:",
+        gettingStartedText: "Ready to transform your images with Showme AI? Getting started is easy:",
         gettingStarted1: "1. Sign up for a free account",
         gettingStarted1Text: "Our free plan gives you 5 image generations per month to try out the service.",
         gettingStarted2: "2. Upload your first image",
@@ -124,24 +124,24 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         gettingStarted3Text: "Try different descriptions to see the amazing transformations our AI can create.",
         conclusion: "Conclusion",
         conclusionText:
-          "Aiartools represents the future of image editing – where complex technical skills are replaced by simple, natural language instructions. We're just getting started, and we have an exciting roadmap of new features and capabilities planned for the coming months.",
+          "Showme AI represents the future of image editing – where complex technical skills are replaced by simple, natural language instructions. We're just getting started, and we have an exciting roadmap of new features and capabilities planned for the coming months.",
         conclusionText2:
           "We invite you to join us on this journey and experience the magic of AI-powered image transformation. Sign up today and start creating images limited only by your imagination.",
-        tryItNow: "Try Aiartools Now",
+        tryItNow: "Try Showme AI Now",
       },
       zh: {
         backToHome: "返回首页",
         backToBlog: "返回博客",
-        title: "Aiartools介绍：用AI的力量改变你的图像",
+        title: "须弥AI介绍：用AI的力量改变你的图像",
         publishDate: "2025年5月31日",
         readTime: "5分钟阅读",
         category: "产品",
         introduction: "介绍",
         introText:
-          "今天，我们很高兴地介绍Aiartools，这是一个革命性的AI驱动图像转换平台，允许您使用简单的文本提示编辑和转换图像。无论您是专业设计师、社交媒体经理，还是只是喜欢创建美丽图像的人，Aiartools都使图像编辑变得易于使用、有趣且功能强大。",
-        whatIsAiartools: "什么是Aiartools？",
+          "今天，我们很高兴地介绍须弥AI，这是一个革命性的AI驱动图像转换平台，允许您使用简单的文本提示编辑和转换图像。无论您是专业设计师、社交媒体经理，还是只是喜欢创建美丽图像的人，须弥AI都使图像编辑变得易于使用、有趣且功能强大。",
+        whatIsShowmeAI: "什么是须弥AI？",
         whatIsText:
-          "Aiartools是一个能够理解自然语言的AI驱动图像编辑平台。您无需学习复杂的编辑软件或操作数十个滑块和控件，只需描述您想要对图像进行的更改，我们的AI就会完成其余的工作。想要将白天的照片变成夜景？在您的客厅照片中添加一只猫？将您的肖像转变为动漫角色？使用Aiartools，只需输入您的请求即可。",
+          "须弥AI是一个能够理解自然语言的AI驱动图像编辑平台。您无需学习复杂的编辑软件或操作数十个滑块和控件，只需描述您想要对图像进行的更改，我们的AI就会完成其余的工作。想要将白天的照片变成夜景？在您的客厅照片中添加一只猫？将您的肖像转变为动漫角色？使用须弥AI，只需输入您的请求即可。",
         keyFeatures: "主要功能",
         feature1Title: "智能关键词编辑",
         feature1Text:
@@ -155,7 +155,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         feature4Text:
           "以高达4K的分辨率导出您的作品，可用于打印和数字使用。我们的AI即使在复杂的转换过程中也能保持图像质量。",
         howItWorks: "工作原理",
-        howItWorksText: "使用Aiartools非常简单：",
+        howItWorksText: "使用须弥AI非常简单：",
         step1: "1. 上传您的图像",
         step1Text: "首先上传您想要转换的图像。我们支持所有常见的图像格式。",
         step2: "2. 描述您想要的更改",
@@ -163,7 +163,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         step3: "3. 生成和下载",
         step3Text: "我们的AI处理您的请求并在几秒钟内生成转换后的图像。下载它并与世界分享您的创作。",
         useCases: "使用场景",
-        useCasesText: "Aiartools可以在无数创意方式中使用：",
+        useCasesText: "须弥AI可以在无数创意方式中使用：",
         useCase1: "• 社交媒体内容创作",
         useCase1Text: "为您的社交媒体帖子创建引人注目、独特的图像，让您在人群中脱颖而出。",
         useCase2: "• 营销材料",
@@ -173,7 +173,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         useCase4: "• 电子商务产品摄影",
         useCase4Text: "增强产品照片或更改背景，以在不同环境中展示您的产品。",
         gettingStarted: "入门指南",
-        gettingStartedText: "准备好用Aiartools转换您的图像了吗？入门很简单：",
+        gettingStartedText: "准备好用须弥AI转换您的图像了吗？入门很简单：",
         gettingStarted1: "1. 注册免费账户",
         gettingStarted1Text: "我们的免费计划每月提供5次图像生成，让您试用该服务。",
         gettingStarted2: "2. 上传您的第一张图像",
@@ -182,10 +182,10 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
         gettingStarted3Text: "尝试不同的描述，看看我们的AI可以创建的惊人转换。",
         conclusion: "结论",
         conclusionText:
-          "Aiartools代表了图像编辑的未来——复杂的技术技能被简单、自然的语言指令所取代。我们才刚刚开始，我们计划在未来几个月内推出令人兴奋的新功能和能力。",
+          "须弥AI代表了图像编辑的未来——复杂的技术技能被简单、自然的语言指令所取代。我们才刚刚开始，我们计划在未来几个月内推出令人兴奋的新功能和能力。",
         conclusionText2:
           "我们邀请您加入我们的旅程，体验AI驱动的图像转换的魔力。立即注册并开始创建仅受您想象力限制的图像。",
-        tryItNow: "立即试用Aiartools",
+        tryItNow: "立即试用须弥AI",
       },
     }
     return translations[locale]?.[key] || translations.en[key]
@@ -237,7 +237,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
               <div className="mb-10 rounded-xl overflow-hidden">
                 <Image
                   src="/images/Transform Your Images with the Power of AI.png"
-                  alt="Aiartools Introduction"
+                  alt="Showme AI Introduction"
                   width={1000}
                   height={500}
                   className="w-full object-cover"
@@ -252,7 +252,7 @@ export default async function IntroducingAiartools({ params }: BlogPostProps) {
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold mb-4">{t("whatIsAiartools")}</h2>
+                  <h2 className="text-2xl font-semibold mb-4">{t("whatIsShowmeAI")}</h2>
                   <p className="text-muted-foreground leading-relaxed">{t("whatIsText")}</p>
                 </section>
 

@@ -11,13 +11,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   
   const titles = {
-    en: "Complete Guide: How to Edit Images with Aiartools | AI Image Editing Tutorial",
-    zh: "完整指南：如何使用Aiartools编辑图片 | AI图像编辑教程"
+    en: "Complete Guide: How to Edit Images with Showme AI | AI Image Editing Tutorial",
+    zh: "完整指南：如何使用须弥AI编辑图片 | AI图像编辑教程"
   }
   
   const descriptions = {
-    en: "Learn how to edit and transform images using Aiartools. Complete step-by-step tutorial with tips, techniques, and examples for AI-powered image editing.",
-    zh: "学习如何使用Aiartools编辑和变换图片。包含AI驱动图像编辑的技巧、技术和示例的完整分步教程。"
+    en: "Learn how to edit and transform images using Showme AI. Complete step-by-step tutorial with tips, techniques, and examples for AI-powered image editing.",
+    zh: "学习如何使用须弥AI编辑和变换图片。包含AI驱动图像编辑的技巧、技术和示例的完整分步教程。"
   }
 
   const title = titles[locale as keyof typeof titles] || titles.en
@@ -29,16 +29,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `https://aiartools.com/${locale}/blog/how-to-edit-images`,
-      siteName: "Aiartools",
+      url: `https://showmeai.art/${locale}/blog/how-to-edit-images`,
+      siteName: "Showme AI",
       locale: locale === 'zh' ? 'zh_CN' : 'en_US',
       type: 'article',
       images: [
         {
-          url: 'https://aiartools.com/images/How to Edit Images with Aiartools.png',
-          width: 1000,
-          height: 400,
-          alt: 'How to Edit Images with Aiartools',
+                url: 'https://showmeai.art/images/How to Edit Images with Aiartools.png',
+      width: 1000,
+      height: 400,
+      alt: 'How to Edit Images with Showme AI',
         },
       ],
     },
@@ -46,13 +46,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       card: 'summary_large_image',
       title,
       description,
-      images: ['https://aiartools.com/images/How to Edit Images with Aiartools.png'],
+      images: ['https://showmeai.art/images/How to Edit Images with Aiartools.png'],
     },
     alternates: {
-      canonical: `https://aiartools.com/${locale}/blog/how-to-edit-images`,
+      canonical: `https://showmeai.art/${locale}/blog/how-to-edit-images`,
       languages: {
-        'en': 'https://aiartools.com/en/blog/how-to-edit-images',
-        'zh': 'https://aiartools.com/zh/blog/how-to-edit-images',
+        'en': 'https://showmeai.art/en/blog/how-to-edit-images',
+        'zh': 'https://showmeai.art/zh/blog/how-to-edit-images',
       },
     },
   }
@@ -70,13 +70,13 @@ export default async function HowToEditImages({ params }: BlogPostProps) {
       en: {
         backToHome: "Back to Home",
         backToBlog: "Back to Blog",
-        title: "Complete Guide: How to Edit Images with Aiartools",
+        title: "Complete Guide: How to Edit Images with Showme AI",
         publishDate: "June 1, 2025",
         readTime: "8 min read",
         category: "Tutorial",
         introduction: "Getting Started with AI Image Editing",
         introText:
-          "Welcome to the complete guide on how to edit images using Aiartools! Whether you're a beginner or looking to improve your AI image editing skills, this comprehensive tutorial will walk you through everything you need to know to create stunning image transformations.",
+          "Welcome to the complete guide on how to edit images using Showme AI! Whether you're a beginner or looking to improve your AI image editing skills, this comprehensive tutorial will walk you through everything you need to know to create stunning image transformations.",
         stepByStep: "Step-by-Step Tutorial",
         step1Title: "Step 1: Upload Your Image",
         step1Text: "The first step is to upload the image you want to transform. Here's how:",
@@ -185,21 +185,21 @@ export default async function HowToEditImages({ params }: BlogPostProps) {
         practice6: "Don't be afraid to try creative and unusual combinations",
         conclusion: "Start Creating Amazing Images Today",
         conclusionText:
-          "With these techniques and tips, you're ready to create stunning image transformations using Aiartools. Remember, the key to success is experimentation and practice. Don't be afraid to try different prompts and approaches – that's how you'll discover the most creative possibilities!",
+          "With these techniques and tips, you're ready to create stunning image transformations using Showme AI. Remember, the key to success is experimentation and practice. Don't be afraid to try different prompts and approaches – that's how you'll discover the most creative possibilities!",
         conclusionText2:
           "Ready to put these techniques into practice? Head over to our demo section and start transforming your images with the power of AI.",
-        tryNow: "Try Aiartools Now",
+        tryNow: "Try Showme AI Now",
       },
       zh: {
         backToHome: "返回首页",
         backToBlog: "返回博客",
-        title: "完整指南：如何使用Aiartools编辑图片",
+        title: "完整指南：如何使用须弥AI编辑图片",
         publishDate: "2025年6月1日",
         readTime: "8分钟阅读",
         category: "教程",
         introduction: "AI图像编辑入门",
         introText:
-          "欢迎来到使用Aiartools编辑图片的完整指南！无论您是初学者还是想要提高AI图像编辑技能，这个全面的教程将引导您了解创建令人惊叹的图像变换所需的一切知识。",
+          "欢迎来到使用须弥AI编辑图片的完整指南！无论您是初学者还是想要提高AI图像编辑技能，这个全面的教程将引导您了解创建令人惊叹的图像变换所需的一切知识。",
         stepByStep: "分步教程",
         step1Title: "第1步：上传您的图片",
         step1Text: "第一步是上传您想要变换的图片。操作方法如下：",
@@ -291,9 +291,9 @@ export default async function HowToEditImages({ params }: BlogPostProps) {
         practice6: "不要害怕尝试创意和不寻常的组合",
         conclusion: "今天就开始创建令人惊叹的图像",
         conclusionText:
-          "有了这些技术和技巧，您已经准备好使用Aiartools创建令人惊叹的图像变换。记住，成功的关键是实验和练习。不要害怕尝试不同的提示词和方法——这就是您发现最具创意可能性的方式！",
+          "有了这些技术和技巧，您已经准备好使用须弥AI创建令人惊叹的图像变换。记住，成功的关键是实验和练习。不要害怕尝试不同的提示词和方法——这就是您发现最具创意可能性的方式！",
         conclusionText2: "准备将这些技术付诸实践了吗？前往我们的演示部分，开始用AI的力量变换您的图像。",
-        tryNow: "立即试用Aiartools",
+        tryNow: "立即试用须弥AI",
       },
     }
     return translations[locale]?.[key] || translations.en[key]
@@ -345,7 +345,7 @@ export default async function HowToEditImages({ params }: BlogPostProps) {
               <div className="mb-10 rounded-xl overflow-hidden">
                 <Image
                   src="/images/How to Edit Images with Aiartools.png"
-                  alt="How to Edit Images with Aiartools"
+                  alt="How to Edit Images with Showme AI"
                   width={1000}
                   height={500}
                   className="w-full object-cover"

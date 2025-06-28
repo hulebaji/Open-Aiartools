@@ -16,7 +16,7 @@ export default function SEO({
   description: customDescription,
   keywords: customKeywords,
   image = '/images/og-image.png',
-  url = 'https://aiartools.com',
+  url = 'https://showmeai.art',
   type = 'website',
   locale = 'en'
 }: SEOProps) {
@@ -32,7 +32,7 @@ export default function SEO({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Aiartools Team" />
+      <meta name="author" content={`${locale === 'zh' ? '须弥AI' : 'Showme AI'} Team`} />
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       
@@ -42,7 +42,7 @@ export default function SEO({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
       <meta property="og:url" content={url} />
-      <meta property="og:site_name" content="Aiartools" />
+      <meta property="og:site_name" content={locale === 'zh' ? '须弥AI' : 'Showme AI'} />
       <meta property="og:locale" content={locale} />
       
       {/* Twitter Card meta 标签 */}
@@ -50,14 +50,14 @@ export default function SEO({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
-      <meta name="twitter:creator" content="@aiartools" />
-      <meta name="twitter:site" content="@aiartools" />
+      <meta name="twitter:creator" content="@hulebaji" />
+      <meta name="twitter:site" content="@hulebaji" />
       
       {/* 语言相关 */}
       <meta httpEquiv="content-language" content={locale} />
-      <link rel="alternate" hrefLang="en" href="https://aiartools.com" />
-      <link rel="alternate" hrefLang="zh" href="https://aiartools.com/zh" />
-      <link rel="alternate" hrefLang="x-default" href="https://aiartools.com" />
+      <link rel="alternate" hrefLang="en" href="https://showmeai.art" />
+      <link rel="alternate" hrefLang="zh" href="https://showmeai.art/zh" />
+      <link rel="alternate" hrefLang="x-default" href="https://showmeai.art" />
       
       {/* 额外的 meta 标签 */}
       <meta name="theme-color" content="#6366f1" />

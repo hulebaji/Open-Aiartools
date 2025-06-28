@@ -10,13 +10,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params
   
   const titles = {
-    en: "Cookie Policy - Aiartools | AI-Powered Image Transformation",
-    zh: "Cookie政策 - Aiartools | AI驱动的图像变换工具"
+    en: "Cookie Policy - Showme AI | AI-Powered Image Transformation",
+    zh: "Cookie政策 - 须弥AI | AI驱动的图像变换工具"
   }
   
   const descriptions = {
-    en: "Learn about how Aiartools uses cookies to enhance your experience. Understand our cookie types, security measures, and how to manage your preferences.",
-    zh: "了解Aiartools如何使用Cookie来增强您的体验。了解我们的Cookie类型、安全措施以及如何管理您的偏好。"
+    en: "Learn about how Showme AI uses cookies to enhance your experience. Understand our cookie types, security measures, and how to manage your preferences.",
+    zh: "了解须弥AI如何使用Cookie来增强您的体验。了解我们的Cookie类型、安全措施以及如何管理您的偏好。"
   }
 
   const title = titles[locale as keyof typeof titles] || titles.en
@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title,
       description,
-      url: `https://aiartools.com/${locale}/cookies`,
-      siteName: "Aiartools",
+      url: `https://showmeai.art/${locale}/cookies`,
+      siteName: "Showme AI",
       locale: locale === 'zh' ? 'zh_CN' : 'en_US',
       type: 'website',
     },
@@ -39,10 +39,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description,
     },
     alternates: {
-      canonical: `https://aiartools.com/${locale}/cookies`,
+      canonical: `https://showmeai.art/${locale}/cookies`,
       languages: {
-        'en': 'https://aiartools.com/en/cookies',
-        'zh': 'https://aiartools.com/zh/cookies',
+        'en': 'https://showmeai.art/en/cookies',
+        'zh': 'https://showmeai.art/zh/cookies',
       },
     },
   }
@@ -66,7 +66,7 @@ export default async function CookiesPage({ params }: CookiesPageProps) {
           "Cookies are small text files that are stored on your computer or mobile device when you visit our website. They are widely used to make websites work more efficiently and provide information to website owners about how users interact with their sites.",
         howWeUseCookiesTitle: "How We Use Cookies",
         howWeUseCookiesText:
-          "Aiartools uses cookies to enhance your experience on our website and service. We use cookies for the following purposes:",
+          "Showme AI uses cookies to enhance your experience on our website and service. We use cookies for the following purposes:",
         cookieUsesList: [
           "Essential Functionality: To enable core website features and user authentication",
           "User Preferences: To remember your settings, language preferences, and theme choices",
@@ -170,7 +170,7 @@ export default async function CookiesPage({ params }: CookiesPageProps) {
         contactUsTitle: "Contact Us",
         contactUsText: "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
         contactInfo:
-          "Email: wt@wmcircle.cn\nSubject Line: Cookie Policy Inquiry\nResponse Time: We aim to respond within 24 hours",
+          "Email: hi@showmeai.art\nSubject Line: Cookie Policy Inquiry\nResponse Time: We aim to respond within 24 hours",
       },
       zh: {
         backToHome: "返回首页",
@@ -180,7 +180,7 @@ export default async function CookiesPage({ params }: CookiesPageProps) {
         whatAreCookiesText:
           "Cookie是当您访问我们的网站时存储在您的计算机或移动设备上的小文本文件。它们被广泛用于使网站更高效地工作，并向网站所有者提供有关用户如何与其网站交互的信息。",
         howWeUseCookiesTitle: "我们如何使用Cookie",
-        howWeUseCookiesText: "Aiartools使用Cookie来增强您在我们网站和服务上的体验。我们将Cookie用于以下目的：",
+        howWeUseCookiesText: "须弥AI使用Cookie来增强您在我们网站和服务上的体验。我们将Cookie用于以下目的：",
         cookieUsesList: [
           "基本功能：启用核心网站功能和用户身份验证",
           "用户偏好：记住您的设置、语言偏好和主题选择",
@@ -274,7 +274,7 @@ export default async function CookiesPage({ params }: CookiesPageProps) {
           "我们可能会不时更新此Cookie政策，以反映我们实践中的变化或出于其他运营、法律或监管原因。我们将通过在我们的网站上发布更新的政策并更新\"最后更新\"日期来通知您任何重大变更。",
         contactUsTitle: "联系我们",
         contactUsText: "如果您对我们使用Cookie或此Cookie政策有任何疑问，请联系我们：",
-        contactInfo: "电子邮件：wt@wmcircle.cn\n主题行：Cookie政策咨询\n响应时间：我们力争在24小时内回复",
+        contactInfo: "电子邮件：hi@showmeai.art\n主题行：Cookie政策咨询\n响应时间：我们力争在24小时内回复",
       },
     }
     return translations[locale]?.[key] || translations.en[key]

@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
         
         const emailResult = await sendEmail({
           to: user.email,
-          subject: locale === 'zh' ? 'Aiartools - 密码重置' : 'Aiartools - Password Reset',
+          subject: locale === 'zh' ? '须弥AI - 密码重置' : 'Showme AI - Password Reset',
           html: emailHtml,
         });
 
